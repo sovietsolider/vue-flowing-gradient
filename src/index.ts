@@ -1,4 +1,5 @@
 // Main component export
+// Note: Vue components are distributed as source files and resolved by the consumer's bundler
 export { default as GradFlow } from './components/GradFlow.vue'
 
 // Types
