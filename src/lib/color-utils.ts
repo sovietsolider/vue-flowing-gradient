@@ -1,10 +1,16 @@
-import { RGB } from '@/types/gradient'
+import type { RGB } from '@/types/gradient'
 
-export const normalizeRgb = (rgb: RGB): [number, number, number] => [
-  rgb.r / 255,
-  rgb.g / 255,
-  rgb.b / 255,
-]
+export const normalizeRgb = (rgb: RGB | undefined): [number, number, number] => {
+  if (!rgb || typeof rgb.r !== 'number' || typeof rgb.g !== 'number' || typeof rgb.b !== 'number') {
+    // Fallback to white if rgb is invalid
+    return [1, 1, 1]
+  }
+  return [
+    rgb.r / 255,
+    rgb.g / 255,
+    rgb.b / 255,
+  ]
+}
 
 export const rgbToHex = (rgb: RGB): string =>
   '#' +

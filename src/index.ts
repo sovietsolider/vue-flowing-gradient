@@ -1,5 +1,5 @@
 // Main component export
-export { default as GradFlow, default } from './components/grad-flow'
+export { default as GradFlow } from './components/GradFlow.vue'
 
 // Types
 export type {

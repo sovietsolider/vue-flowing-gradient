@@ -1,4 +1,4 @@
-import { RGB } from '@/types/gradient'
+import type { RGB } from '@/types/gradient'
 
 /**
  * Converts a hex color string to RGB object
@@ -33,9 +33,18 @@ export function rgbToHex(rgb: RGB): string {
  * @param color - Hex string or RGB object
  * @returns RGB object
  */
-export function normalizeColor(color: string | RGB): RGB {
+export function normalizeColor(color: string | RGB | undefined | null): RGB {
+  if (!color) {
+    // Return default color if color is undefined or null
+    return { r: 226, g: 98, b: 75 }
+  }
   if (typeof color === 'string') {
     return hexToRgb(color)
   }
-  return color
+  // Validate RGB object
+  if (typeof color === 'object' && 'r' in color && 'g' in color && 'b' in color) {
+    return color
+  }
+  // Fallback to default color
+  return { r: 226, g: 98, b: 75 }
 }

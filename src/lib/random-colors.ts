@@ -1,4 +1,4 @@
-import { RGB, GradientConfig, GradientType } from '@/types/gradient'
+import type { RGB, GradientConfig, GradientType } from '@/types/gradient'
 
 export function randomRGB(): RGB {
   return {

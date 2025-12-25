@@ -1,4 +1,4 @@
-import { GradientConfig } from '@/types/gradient'
+import type { GradientConfig } from '@/types/gradient'
 
 export const copyCodeToClipboard = (config: GradientConfig) => {
   const codeString = `config={{

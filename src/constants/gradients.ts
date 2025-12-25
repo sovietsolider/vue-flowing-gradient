@@ -1,4 +1,4 @@
-import { GradientConfig, GradientType } from '@/types/gradient'
+import type { GradientConfig, GradientType } from '@/types/gradient'
 
 export const DEFAULT_CONFIG: GradientConfig = {
   color1: { r: 226, g: 98, b: 75 },
