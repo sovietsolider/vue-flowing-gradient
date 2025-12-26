@@ -1,4 +1,4 @@
-# GradFlow
+# GradFlow (Vue / Nuxt)
 
 Beautiful animated WebGL gradients for Vue and Nuxt. Create stunning, performant gradient backgrounds with multiple animation styles.
 
@@ -15,7 +15,7 @@ Beautiful animated WebGL gradients for Vue and Nuxt. Create stunning, performant
 ## Installation
 
 ```bash
-npm install gradflow
+npm install gradflow-vue
 ```
 
 ## Quick Start
@@ -31,7 +31,7 @@ npm install gradflow
 </template>
 
 <script setup lang="ts">
-import { GradFlow } from "gradflow";
+import { GradFlow } from "gradflow-vue";
 </script>
 ```
 
@@ -46,7 +46,7 @@ import { GradFlow } from "gradflow";
 </template>
 
 <script setup lang="ts">
-import { GradFlow } from "gradflow";
+import { GradFlow } from "gradflow-vue";
 </script>
 ```
 
@@ -70,7 +70,7 @@ import { GradFlow } from "gradflow";
 </template>
 
 <script setup lang="ts">
-import { GradFlow } from "gradflow";
+import { GradFlow } from "gradflow-vue";
 </script>
 ```
 
@@ -88,7 +88,7 @@ import { GradFlow } from "gradflow";
 </template>
 
 <script setup lang="ts">
-import { GradFlow } from "gradflow";
+import { GradFlow } from "gradflow-vue";
 </script>
 ```
 
@@ -189,7 +189,7 @@ type RGB = {
 ### Color Conversion
 
 ```typescript
-import { hexToRgb, rgbToHex, normalizeColor } from "gradflow";
+import { hexToRgb, rgbToHex, normalizeColor } from "gradflow-vue";
 
 // Convert hex to RGB
 const rgb = hexToRgb("#ff0000"); // { r: 255, g: 0, b: 0 }
@@ -204,7 +204,7 @@ const normalized = normalizeColor("#ff0000"); // { r: 255, g: 0, b: 0 }
 ### Random Colors
 
 ```typescript
-import { randomRGB, generateRandomColors } from "gradflow";
+import { randomRGB, generateRandomColors } from "gradflow-vue";
 
 // Generate single random RGB color
 const color = randomRGB();
@@ -288,7 +288,7 @@ import type {
   GradientConfigInput,
   RGB,
   GradientType,
-} from "gradflow";
+} from "gradflow-vue";
 ```
 
 ## License
@@ -297,7 +297,7 @@ MIT License - feel free to use in your projects!
 
 ## Credits
 
-Created by [Meer](https://www.meera.dev/)
+Created by [Meer](https://www.meera.dev/). Migrated to Vue by [sovietsolider](https://github.com/sovietsolider).
 
 ---
 

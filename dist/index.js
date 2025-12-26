@@ -423,12 +423,13 @@ function useWebGLRenderer(config) {
     };
   });
   const handleResize = () => {
+    var _a, _b;
     const canvas = canvasRef.value;
     const renderer = rendererRef.value;
     const program = programRef.value;
     if (!canvas || !renderer) return;
-    const w = window.innerWidth;
-    const h = window.innerHeight;
+    const h = ((_a = canvas.parentElement) == null ? void 0 : _a.clientHeight) || 0;
+    const w = ((_b = canvas.parentElement) == null ? void 0 : _b.clientWidth) || 0;
     const dpr = Math.min(window.devicePixelRatio, 2);
     canvas.width = w * dpr;
     canvas.height = h * dpr;

@@ -332,8 +332,11 @@ export function useWebGLRenderer(
 
     // For fullscreen, always use window dimensions
     // This ensures canvas takes full viewport
-    const w = window.innerWidth;
-    const h = window.innerHeight;
+    // const w = window.innerWidth;
+    // const h = window.innerHeight;
+
+    const h = canvas.parentElement?.clientHeight || 0;
+    const w = canvas.parentElement?.clientWidth || 0;
 
     const dpr = Math.min(window.devicePixelRatio, 2);
 
