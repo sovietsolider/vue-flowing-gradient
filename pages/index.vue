@@ -1,7 +1,7 @@
 <template>
-  <main class="relative h-screen w-full overflow-hidden">
-    <GradFlow :config="gradientConfig" class="absolute inset-0 w-full h-full" />
-  </main>
+  <div class="h-20 w-full cont">
+    <GradFlow :config="gradientConfig" class="w-full" />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -97,3 +97,9 @@ const configTableRows = [
   },
 ];
 </script>
+
+<style scoped>
+.cont {
+  height: 500px;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="antialiased dark bg-background text-foreground">
+  <div class="">
     <NuxtPage />
   </div>
 </template>
